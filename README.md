@@ -1,55 +1,7 @@
-# TryHackMe Dodge Writeup
+# TryHackMe Writeups to share
 
 
-└─$ ping 10.113.131.196                      
-PING 10.113.131.196 (10.113.131.196) 56(84) bytes of data.
-64 bytes from 10.113.131.196: icmp_seq=1 ttl=62 time=18.7 ms
-64 bytes from 10.113.131.196: icmp_seq=2 ttl=62 time=18.5 ms
-64 bytes from 10.113.131.196: icmp_seq=3 ttl=62 time=18.7 ms
-^C
---- 10.113.131.196 ping statistics ---
-3 packets transmitted, 3 received, 0% packet loss, time 2005ms
-rtt min/avg/max/mdev = 18.511/18.640/18.747/0.097 ms
 
-server is up, let's start!
-                                                                                                                                                   
-┌──(skyray㉿kali)-[~/Desktop/WORKING]
-└─$ nmap 10.113.131.196 -sC -sV -Pn
-Starting Nmap 7.98 ( https://nmap.org ) at 2026-03-10 05:31 -0400
-Nmap scan report for 10.113.131.196
-Host is up (0.019s latency).
-Not shown: 997 filtered tcp ports (no-response)
-PORT    STATE SERVICE  VERSION
-22/tcp  open  ssh      OpenSSH 8.2p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
-| ssh-hostkey: 
-|   3072 bd:ca:e2:d0:90:86:69:89:4a:75:4a:6f:7e:32:c1:32 (RSA)
-|   256 42:b2:f0:69:07:d0:d5:84:76:cb:05:08:71:8b:85:f6 (ECDSA)
-|_  256 0c:aa:0e:c6:f4:c1:f2:c5:d0:b5:1a:ec:45:81:93:51 (ED25519)
-80/tcp  open  http     Apache httpd 2.4.41
-|_http-server-header: Apache/2.4.41 (Ubuntu)
-|_http-title: 403 Forbidden
-443/tcp open  ssl/http Apache httpd 2.4.41
-|_http-server-header: Apache/2.4.41 (Ubuntu)
-| tls-alpn: 
-|_  http/1.1
-|_http-title: 403 Forbidden
-| ssl-cert: Subject: commonName=dodge.thm/organizationName=Dodge Company, Inc./stateOrProvinceName=Tokyo/countryName=JP
-| Subject Alternative Name: DNS:dodge.thm, DNS:www.dodge.thm, DNS:blog.dodge.thm, DNS:dev.dodge.thm, DNS:touch-me-not.dodge.thm, DNS:netops-dev.dodge.thm, DNS:ball.dodge.thm
-| Not valid before: 2023-06-29T11:46:51
-|_Not valid after:  2123-06-05T11:46:51
-|_ssl-date: TLS randomness does not represent time
-Service Info: Hosts: default, ip-10-113-131-196.eu-central-1.compute.internal; OS: Linux; CPE: cpe:/o:linux:linux_kernel
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 24.03 seconds
-
-There is a commonName domain: dodge.thm
-Take a look at these --> Subject Alternative: DNS:dodge.thm, DNS:www.dodge.thm, DNS:blog.dodge.thm, DNS:dev.dodge.thm, DNS:touch-me-not.dodge.thm, DNS:netops-dev.dodge.thm, DNS:ball.dodge.thm
-Adding to hosts
-
-┌──(skyray㉿kali)-[~/Desktop/WORKING]
-└─$ nano /etc/hosts
-
-10.113.131.196 dodge.thm www.dodge.thm blog.dodge.thm dev.dodge.thm touch-me-not.dodge.thm netops-dev.dodge.thm ball.dodge.thm
 
 looking around all these subdomains
 

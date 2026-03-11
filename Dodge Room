@@ -130,7 +130,7 @@ https://netops-dev.dodge.thm/firewall10110.php
 
 ------------------------------------------------------
 
-<img width="670" height="545" alt="Screenshot_2026-03-10_08-31-55" src="https://github.com/user-attachments/assets/9dc7ee50-62d1-4940-b355-8bee85a039de" />
+
 
 ┌──(skyray㉿kali)-[~/Desktop/WORKING]
 └─$ nmap 10.113.131.196 -sC -sV -p 21  --> firewalled

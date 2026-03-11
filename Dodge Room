@@ -3,7 +3,7 @@ PING 10.113.131.196 (10.113.131.196) 56(84) bytes of data.
 64 bytes from 10.113.131.196: icmp_seq=1 ttl=62 time=18.7 ms
 64 bytes from 10.113.131.196: icmp_seq=2 ttl=62 time=18.5 ms
 64 bytes from 10.113.131.196: icmp_seq=3 ttl=62 time=18.7 ms
-^C
+
 --- 10.113.131.196 ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2005ms
 rtt min/avg/max/mdev = 18.511/18.640/18.747/0.097 ms
@@ -48,10 +48,15 @@ take a look at this: Subject Alternative: DNS:dodge.thm, DNS:www.dodge.thm, DNS:
 
 10.113.131.196 dodge.thm www.dodge.thm blog.dodge.thm dev.dodge.thm touch-me-not.dodge.thm netops-dev.dodge.thm ball.dodge.thm
 
-looking around all these domain and subs
+looking around all these subdomains
+
 -------------------------------------------
-view-source:https://netops-dev.dodge.thm/
------------------------------------------
+
+view-source:
+https://netops-dev.dodge.thm
+
+------------------------------------------
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,7 +91,10 @@ view-source:https://netops-dev.dodge.thm/
 </body>
 </html>
 ------------------------------------------------------
-view-source:https://netops-dev.dodge.thm/firewall.js
+
+view-source:
+https://netops-dev.dodge.thm/firewall.js
+
 ------------------------------------------------------
 
 // Make an AJAX request using fetch
@@ -115,13 +123,17 @@ fetch('firewall10110.php', {
   });
   
  */
+----------------------------------------------------------
 
-go-to via browser: https://netops-dev.dodge.thm/firewall10110.php 
+go-to via browser: 
+https://netops-dev.dodge.thm/firewall10110.php 
 
+------------------------------------------------------
 
+<img width="670" height="545" alt="Screenshot_2026-03-10_08-31-55" src="https://github.com/user-attachments/assets/9dc7ee50-62d1-4940-b355-8bee85a039de" />
 
 ┌──(skyray㉿kali)-[~/Desktop/WORKING]
-└─$ nmap 10.113.131.196 -sC -sV -p 21
+└─$ nmap 10.113.131.196 -sC -sV -p 21  --> firewalled
 Starting Nmap 7.98 ( https://nmap.org ) at 2026-03-10 06:34 -0400
 Nmap scan report for dodge.thm (10.113.131.196)
 Host is up (0.019s latency).

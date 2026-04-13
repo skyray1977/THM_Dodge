@@ -12,4 +12,4 @@ https://tryhackme.com
 
 ⚠️ Educational Purpose Only
 
-This content is for educational and authorized pen-testing only. Always ensure you what are you doing before testing on any networks/systems.
+This content is for educational and authorized pen-testing only. Please, always ensure you know what are you doing before testing on any networks/systems.
